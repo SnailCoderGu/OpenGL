@@ -47,7 +47,7 @@ public class ShaderHelper {
         final int[] compileStatus = new int[1];
         glGetShaderiv(shaderObjectId,GL_COMPILE_STATUS,compileStatus,0);
         //获得着色器日志信息
-        Log.e(TAG,"Results of compiling shader "+"\n"+shaderCode+"\n"+glGetShaderInfoLog(shaderObjectId));
+        //Log.e(TAG,"Results of compiling shader "+"\n"+shaderCode+"\n"+glGetShaderInfoLog(shaderObjectId));
 
         //判断编译结果
         if(compileStatus[0] ==  0){
@@ -75,7 +75,7 @@ public class ShaderHelper {
         final int[] linkStatus = new int[1];
         glGetProgramiv(programObjectId,GL_LINK_STATUS,linkStatus,0);
         //获得着色器日志信息
-        Log.e(TAG,"Results of link sourcd"+"\n"+vertexShaderId+" "+fragmentShaderId+"\n"+glGetProgramInfoLog(programObjectId));
+        Log.e(TAG,"Results of link "+"\n"+vertexShaderId+"-"+fragmentShaderId+":\n "+programObjectId +":"+glGetProgramInfoLog(programObjectId));
         //判断链接结果
         if(linkStatus[0] == 0){
             glDeleteProgram(programObjectId);
@@ -90,7 +90,7 @@ public class ShaderHelper {
 
         final int[] validateStatus = new int[1];
         glGetShaderiv(programObjectId,GL_VALIDATE_STATUS,validateStatus,0);
-        Log.e(TAG,"Results of validating program"+"\n"+validateStatus[0]+"\n"+glGetProgramInfoLog(programObjectId));
+        Log.e(TAG,"Results of validating program"+"\n"+validateStatus[0]+":\n"+glGetProgramInfoLog(programObjectId));
         return validateStatus[0] != 0;
     }
 

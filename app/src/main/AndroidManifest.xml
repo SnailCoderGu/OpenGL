@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".FirstOpenGLProjectActivity" />
         <activity android:name=".AirHockey1"></activity>
+        <activity android:name=".AirHockey2"></activity>
+        <activity android:name=".AirHockey3"></activity>
     </application>
 
 </manifest>
