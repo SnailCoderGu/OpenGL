@@ -10,6 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import opengl.gp.com.testopengl.render.AirHockeyRenderer3;
+import opengl.gp.com.testopengl.render.AirHockeyRenderer4;
 
 import static android.content.ContentValues.TAG;
 
@@ -31,7 +32,7 @@ public class AirHockey3D extends Activity {
         if(supportsEs2){
             glSurfaceView.setEGLContextClientVersion(2);
 
-            glSurfaceView.setRenderer(new AirHockeyRenderer3(this));
+            glSurfaceView.setRenderer(new AirHockeyRenderer4(this));
             renderSet = true;
         }else{
             Toast.makeText(this,"not support OpenGL Es 2.0",Toast.LENGTH_LONG).show();
