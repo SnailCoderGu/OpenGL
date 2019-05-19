@@ -102,6 +102,13 @@ public class Geometry {
         }
     }
 
+    public static Vector vectorBetween(Point from, Point to) {
+        return new Vector(
+                to.x - from.x,
+                to.y - from.y,
+                to.z - from.z);
+    }
+
     /**
      * y
      * @param point
