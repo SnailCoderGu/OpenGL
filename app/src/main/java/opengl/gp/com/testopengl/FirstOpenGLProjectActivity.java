@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ConfigurationInfo;
-import android.content.res.Configuration;
+
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,9 +12,11 @@ import android.widget.Toast;
 
 import opengl.gp.com.testopengl.render.FirstOpenGLProjectRenderer;
 
-import static android.content.ContentValues.TAG;
+
 
 public class FirstOpenGLProjectActivity extends Activity {
+    private final static String TAG = "FirstOpenGL";
+
     private GLSurfaceView glSurfaceView;
     private boolean renderSet = false;
     @Override

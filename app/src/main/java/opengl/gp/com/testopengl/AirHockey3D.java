@@ -12,9 +12,8 @@ import android.widget.Toast;
 import opengl.gp.com.testopengl.render.AirHockeyRenderer3;
 import opengl.gp.com.testopengl.render.AirHockeyRenderer4;
 
-import static android.content.ContentValues.TAG;
-
-public class AirHockey3D extends Activity {
+public class  AirHockey3D extends Activity {
+    private final static String TAG = "AirHockey3D";
     private GLSurfaceView glSurfaceView;
     private boolean renderSet = false;
     @Override

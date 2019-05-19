@@ -12,7 +12,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TestAirHockey3D();
+        TestAirHockeyTouch();
     }
 
     private void TestFirstOpenenGl(){
@@ -30,5 +30,14 @@ public class MainActivity extends Activity {
     }
     private void TestAirHockey3D(){
         startActivity(new Intent(MainActivity.this,AirHockey3D.class));
+    }
+    private void TestAirHockeyTextured(){
+        startActivity(new Intent(MainActivity.this,AirHockeyTextured.class));
+    }
+    private void TestAirHockeyWithBetterMallets(){
+        startActivity(new Intent(MainActivity.this,AirHockeyWithBetterMallets.class));
+    }
+    private void TestAirHockeyTouch(){
+        startActivity(new Intent(MainActivity.this,AirHockeyTouch.class));
     }
 }
